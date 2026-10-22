@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Editor — Asma Shehzadi | Video Editor & Graphic Designer</title>
+    <meta name="description" content="Official portfolio of Asma Shehzadi (The Editor) — Premium Video Editor and Graphic Designer specializing in reels, YouTube, cinematic edits, motion graphics, and visual branding." />
+    <meta property="og:title" content="The Editor — Asma Shehzadi | Video Editor & Graphic Designer" />
+    <meta property="og:description" content="Official portfolio of Asma Shehzadi (The Editor) — Premium Video Editor and Graphic Designer specializing in reels, YouTube, cinematic edits, motion graphics, and visual branding." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="antialiased transition-colors selection:bg-amber-400 selection:text-neutral-950" style="background-color: var(--color-site-bg, #0A0A0A); color: var(--color-site-text, #F3F4F6);">
+    <div id="root">
+      <!-- Branded Initial Splash (Replaced immediately when React mounts) -->
+      <div id="initial-loader" style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #0A0A0A; color: #F3F4F6; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;">
+        <div style="width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, #f59e0b, #d97706); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.45);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px;">The Editor</div>
+        <div style="font-size: 12px; color: #9CA3AF; margin-bottom: 22px;">Asma Shehzadi • Video Editor & Graphic Designer</div>
+        <div style="width: 140px; height: 3px; background: #262626; border-radius: 9999px; overflow: hidden; position: relative;">
+          <div style="width: 50%; height: 100%; background: #f59e0b; border-radius: 9999px; animation: loaderSlide 1.2s infinite ease-in-out;"></div>
+        </div>
+        <style>
+          @keyframes loaderSlide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(250%); }
+          }
+        </style>
+      </div>
+    </div>
+
+    <!-- 1. Vite Development Server Entrypoint (Used in local AI Studio environment) -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- 2. Production Static Hosting Fallback (Used when raw ZIP is deployed directly to Netlify Drop without a build step) -->
+    <script>
+      (function() {
+        function checkAndLoadBundle() {
+          // If React hasn't mounted yet, the host environment is not running a Vite dev server (e.g., Netlify Drop)
+          if (!window.__REACT_APP_MOUNTED__) {
+            console.log('Static hosting detected: mounting precompiled production bundle...');
+            
+            // Load production CSS
+            if (!document.querySelector('link[data-prod-bundle="css"]')) {
+              var css = document.createElement('link');
+              css.rel = 'stylesheet';
+              css.setAttribute('data-prod-bundle', 'css');
+              css.href = './assets/index.css';
+              document.head.appendChild(css);
+            }
+
+            // Load production JS
+            if (!document.querySelector('script[data-prod-bundle="js"]')) {
+              var js = document.createElement('script');
+              js.type = 'module';
+              js.crossOrigin = 'anonymous';
+              js.setAttribute('data-prod-bundle', 'js');
+              js.src = './assets/index.js';
+              document.body.appendChild(js);
+            }
+          }
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(checkAndLoadBundle, 100);
+          });
+        } else {
+          setTimeout(checkAndLoadBundle, 100);
+        }
+      })();
+    </script>
+  </body>
+</html>

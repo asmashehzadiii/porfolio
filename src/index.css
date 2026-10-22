@@ -1,0 +1,366 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-site-bg: #0A0A0A;
+    --color-site-card: #141414;
+    --color-site-card-subtle: #1C1C1C;
+    --color-site-text: #F3F4F6;
+    --color-site-muted: #9CA3AF;
+    --color-site-heading: #FFFFFF;
+    --color-site-accent: #F59E0B;
+    --color-site-accent-hover: #D97706;
+    --color-site-border: #262626;
+    --color-site-btn-bg: #F59E0B;
+    --color-site-btn-text: #0A0A0A;
+  }
+
+  html.light {
+    --color-site-bg: #F8F9FA;
+    --color-site-card: #FFFFFF;
+    --color-site-card-subtle: #F3F4F6;
+    --color-site-text: #1F2937;
+    --color-site-muted: #4B5563;
+    --color-site-heading: #111827;
+    --color-site-accent: #D97706;
+    --color-site-accent-hover: #B45309;
+    --color-site-border: #E5E7EB;
+    --color-site-btn-bg: #D97706;
+    --color-site-btn-text: #FFFFFF;
+  }
+
+  body {
+    background-color: var(--color-site-bg);
+    color: var(--color-site-text);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.6);
+}
+
+/* Infinite Marquee Animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Hero Staggered Entrance Animations */
+@keyframes heroEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-anim-1 {
+  animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-anim-2 {
+  opacity: 0;
+  animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
+}
+
+.hero-anim-3 {
+  opacity: 0;
+  animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.24s forwards;
+}
+
+.hero-anim-4 {
+  opacity: 0;
+  animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.36s forwards;
+}
+
+.hero-anim-5 {
+  opacity: 0;
+  animation: heroEntrance 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.48s forwards;
+}
+
+.hero-anim-visual {
+  opacity: 0;
+  animation: heroEntrance 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+/* ========================================================
+   SECTION KEYFRAME ANIMATIONS (Admin Controllable)
+   ======================================================== */
+@keyframes animFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes animFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.anim-fade-in {
+  animation: animFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.anim-fade-up {
+  animation: animFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.anim-fade-down {
+  animation: animFadeDown 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.anim-slide-left {
+  animation: animSlideLeft 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.anim-slide-right {
+  animation: animSlideRight 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.anim-zoom-in {
+  animation: animZoomIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Mobile-only skills bottom-to-top subtle fade animation */
+@media (max-width: 768px) {
+  .mobile-skills-ready {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .mobile-skills-ready.mobile-skills-enter {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card hover animation class */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================================
+   PRICING & SERVICES VIEWPORT SCROLL-REVEAL FADE-UP ANIMATION
+   Smoothly reveals the pricing section and cards as they enter
+   the viewport across desktop, laptop, tablet, and mobile.
+   ======================================================== */
+.pricing-reveal-init {
+  opacity: 0;
+  transform: translateY(28px);
+  will-change: opacity, transform;
+}
+
+.pricing-reveal-active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* ========================================================
+   UNIVERSAL SCROLL-REVEAL FADE-UP ANIMATION FOR ALL SECTIONS
+   Smoothly reveals each section with upward motion as scrolled into view
+   ======================================================== */
+.section-fade-up-init {
+  opacity: 0;
+  transform: translateY(32px);
+  will-change: opacity, transform;
+}
+
+.section-fade-up-active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .hero-anim-1,
+  .hero-anim-2,
+  .hero-anim-3,
+  .hero-anim-4,
+  .hero-anim-5,
+  .hero-anim-visual,
+  .anim-fade-in,
+  .anim-fade-up,
+  .anim-fade-down,
+  .anim-slide-left,
+  .anim-slide-right,
+  .anim-zoom-in,
+  .mobile-skills-enter,
+  .pricing-reveal-init,
+  .pricing-reveal-active,
+  .section-fade-up-init,
+  .section-fade-up-active {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ========================================================
+   LIGHT MODE STYLING (Soft & Clean, with no !important overrides)
+   Allows custom colors saved in admin panel to take effect.
+   ======================================================== */
+html.light {
+  color-scheme: light;
+}
+
+html.light body {
+  background-color: var(--color-site-bg, #F8F9FA);
+  color: var(--color-site-text, #1F2937);
+}
+
+/* Typography in Light Mode (without !important so section styles can override) */
+html.light h1:not([style*="color"]),
+html.light h2:not([style*="color"]),
+html.light h3:not([style*="color"]),
+html.light h4:not([style*="color"]),
+html.light h5:not([style*="color"]),
+html.light h6:not([style*="color"]) {
+  color: var(--color-site-heading, #111827);
+}
+
+html.light p:not([style*="color"]) {
+  color: var(--color-site-muted, #4B5563);
+}
+
+/* Form inputs in Light Mode */
+html.light input:not([style*="background"]),
+html.light textarea:not([style*="background"]),
+html.light select:not([style*="background"]) {
+  background-color: #FFFFFF;
+  color: #111827;
+  border-color: #E5E7EB;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #9CA3AF;
+}
+
+html.light input:focus,
+html.light textarea:focus,
+html.light select:focus {
+  border-color: var(--color-site-accent, #D97706);
+}
+
+html.light header {
+  background-color: rgba(255, 255, 255, 0.94);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+html.light footer {
+  background-color: #F3F4F6;
+  border-color: #E5E7EB;
+}
+
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}

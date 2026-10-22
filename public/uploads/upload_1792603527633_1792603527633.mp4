@@ -1,0 +1,6 @@
+------WebKitFormBoundary123
+Content-Disposition: form-data; name="file"; filename="my_photo.jpg"
+Content-Type: image/jpeg
+
+test-image-bytes
+------WebKitFormBoundary123--

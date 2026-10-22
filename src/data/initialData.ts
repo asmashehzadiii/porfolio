@@ -1,0 +1,855 @@
+import { WebsiteData } from '../types';
+
+export const initialWebsiteData: WebsiteData = {
+  hero: {
+    title: 'THE EDITOR',
+    subtitle: 'Asma Shehzadi',
+    tagline: 'Your Ideas, My Edit ✦ Turning Ideas into Visual Stories',
+    badgeText: 'Available for Creative Projects',
+    description: 'Senior Video Editor & Graphic Designer crafting high-retention social reels, cinematic documentaries, commercial ads, and iconic brand visuals that captivate audiences and skyrocket engagement.',
+    primaryBtnText: "Let's Work Together",
+    primaryBtnLink: '#contact',
+    secondaryBtnText: 'Explore Portfolio',
+    secondaryBtnLink: '#video-portfolio',
+    profileImage: '/assets/aistudio/ChatGPT_Image_Jul_30__2026__06_53_54_PM_9f4fe06f.png',
+    bannerImage: '/assets/aistudio/Gemini_Generated_Image_skq52gskq52gskq5_c6cd0d86.jfif',
+    stats: [
+      { label: 'Videos Edited', value: '450+', icon: 'Film' },
+      { label: 'Organic Views Generated', value: '120M+', icon: 'Eye' },
+      { label: 'Client Satisfaction', value: '99%', icon: 'Star' },
+      { label: 'Years Experience', value: '5+', icon: 'Sparkles' }
+    ]
+  },
+  about: {
+    badge: 'Meet The Creator',
+    title: 'Mastering the Art of Visual Rhythm & Storytelling',
+    subtitle: 'Passionate Video Editor & Visual Designer based in Pakistan, serving global creators and brands.',
+    bio: [
+      "Hello! I am Asma Shehzadi, known as 'The Editor'. With over 5 years of professional experience, I blend pacing, sound design, motion graphics, and color grading into seamless visual journeys that hold audience attention from the first second.",
+      "Whether it is an ultra-retention TikTok/Instagram reel, a story-driven YouTube documentary, a dynamic talking-head episode, or sleek visual branding, I focus on what makes content memorable and high-performing."
+    ],
+    experienceYears: '5+ Years',
+    completedProjects: '450+',
+    happyClients: '120+',
+    viewsGenerated: '120M+',
+    profileImage: '/assets/aistudio/Gemini_Generated_Image_wvank6wvank6wvan_71b2d2c5.png',
+    signatureText: 'Asma Shehzadi — The Editor',
+    highlights: [
+      'Advanced Adobe Premiere Pro & After Effects Specialist',
+      'High-Retention Sound Design, SFX, & Subtitle Animation',
+      'Cinematic Color Grading & Audio Restoration',
+      'Full Brand Identity, Thumbnails & Social Post Graphics'
+    ],
+    resumeUrl: '#'
+  },
+  videoCategories: [
+    'All',
+    'Talking Head',
+    'AI Video Edits',
+    'Highlights',
+    'Documentary',
+    'Motion Graphics',
+    'Cashcow',
+    'Short-Form Reels'
+  ],
+  videos: [
+    {
+      id: 'vid-1',
+      title: 'High-Retention Talking Head & Podcast Masterclass',
+      description: 'Dynamic pacing with zoom-ins, custom sound effects, b-roll inserts, and modern kinetic typography that doubled average watch time.',
+      category: 'Talking Head',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=1200&q=80',
+      aspectRatio: '16:9',
+      duration: '04:12',
+      clientName: 'Alex Thorne Media',
+      featured: true,
+      order: 1,
+      status: 'published',
+      viewsCount: '1.4M Views',
+      tags: ['Talking Head', 'Sound Design', 'Kinetic Text', 'Color Graded'],
+      createdAt: '2026-08-15'
+    },
+    {
+      id: 'vid-2',
+      title: 'Next-Gen AI Video Synthesis & Cyberpunk Visuals',
+      description: 'Blended AI generation tools with After Effects tracking, glitch transitions, and cinematic sound scapes for a futuristic tech agency.',
+      category: 'AI Video Edits',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
+      aspectRatio: '16:9',
+      duration: '02:45',
+      clientName: 'Synthetix AI Lab',
+      featured: true,
+      order: 2,
+      status: 'published',
+      viewsCount: '890K Views',
+      tags: ['AI Editing', 'Runway', 'Midjourney Motion', 'After Effects'],
+      createdAt: '2026-09-02'
+    },
+    {
+      id: 'vid-3',
+      title: 'Viral Luxury Real Estate & Lifestyle Reel (9:16)',
+      description: 'Ultra-fast beat sync, speed ramping, luxury color palette, and hook-optimized audio for Instagram Reels and TikTok.',
+      category: 'Short-Form Reels',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80',
+      aspectRatio: '9:16',
+      duration: '00:45',
+      clientName: 'Prime Properties Dubai',
+      featured: true,
+      order: 3,
+      status: 'published',
+      viewsCount: '3.2M Views',
+      tags: ['Shorts', 'Reels', 'Speed Ramp', 'Sound FX'],
+      createdAt: '2026-09-18'
+    },
+    {
+      id: 'vid-4',
+      title: 'Deep Dive Documentary: The Fall of Digital Empires',
+      description: 'Archival research, parallax 2.5D photo animation, atmospheric cinematic sound, and paper cutout collage techniques.',
+      category: 'Documentary',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1200&q=80',
+      aspectRatio: '16:9',
+      duration: '14:20',
+      clientName: 'Chronicle History Channel',
+      featured: true,
+      order: 4,
+      status: 'published',
+      viewsCount: '2.1M Views',
+      tags: ['Magnates Media Style', 'Parallax', 'Storytelling'],
+      createdAt: '2026-10-01'
+    },
+    {
+      id: 'vid-5',
+      title: 'Futuristic 3D Product Promo & Kinetic Typography',
+      description: 'Clean camera moves, motion tracked UI elements, HUD graphics, and punchy audio cues for a hardware startup.',
+      category: 'Motion Graphics',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80',
+      aspectRatio: '16:9',
+      duration: '01:15',
+      clientName: 'AeroAudio Tech',
+      featured: false,
+      order: 5,
+      status: 'published',
+      viewsCount: '450K Views',
+      tags: ['Motion Design', 'After Effects', 'Product Ad'],
+      createdAt: '2026-10-10'
+    },
+    {
+      id: 'vid-6',
+      title: 'Automated Cashcow Channel Episode: Tech Billionaires',
+      description: 'High-speed pacing, animated stock footage, custom diagrams, and retention charts designed for maximum monetization.',
+      category: 'Cashcow',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80',
+      aspectRatio: '16:9',
+      duration: '08:30',
+      clientName: 'WealthDaily Hub',
+      featured: false,
+      order: 6,
+      status: 'published',
+      viewsCount: '780K Views',
+      tags: ['Cashcow', 'Faceless YouTube', 'Animation'],
+      createdAt: '2026-10-12'
+    },
+    {
+      id: 'vid-7',
+      title: 'Viral Fitness & Gym Motivation Hook Reel (9:16)',
+      description: 'Punchy bass sound design, seamless whip pans, animated bold subtitles, and color grading tuned for mobile screens.',
+      category: 'Short-Form Reels',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80',
+      aspectRatio: '9:16',
+      duration: '00:32',
+      clientName: 'Titan Athletica',
+      featured: true,
+      order: 7,
+      status: 'published',
+      viewsCount: '1.8M Views',
+      tags: ['Reels', 'Fitness', 'Sound Design', 'TikTok'],
+      createdAt: '2026-10-14'
+    },
+    {
+      id: 'vid-8',
+      title: 'Cinematic Travelogue & Drone Reel: Northern Peaks (9:16)',
+      description: 'Speed ramp transitions, atmospheric Foley audio, luxury LUT grade, and vertical composition storytelling.',
+      category: 'Short-Form Reels',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
+      aspectRatio: '9:16',
+      duration: '00:48',
+      clientName: 'Wanderlust Media',
+      featured: true,
+      order: 8,
+      status: 'published',
+      viewsCount: '2.4M Views',
+      tags: ['Travel Reel', 'Drone', 'Color Grade'],
+      createdAt: '2026-10-16'
+    },
+    {
+      id: 'vid-9',
+      title: 'High-Impact Brand Commercial: Future Mobility (16:9)',
+      description: 'Dynamic 3D transitions, sound design with whooshes and risers, sound track beat sync, and color matched footage.',
+      category: 'Commercial',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80',
+      aspectRatio: '16:9',
+      duration: '01:45',
+      clientName: 'Volt Motors',
+      featured: true,
+      order: 9,
+      status: 'published',
+      viewsCount: '920K Views',
+      tags: ['Commercial', 'Cinematic', 'Automotive'],
+      createdAt: '2026-10-17'
+    },
+    {
+      id: 'vid-10',
+      title: 'Finance & Crypto Deep Dive Analysis (16:9)',
+      description: 'Engaging custom animated infographics, charts, motion graphics, and audio mastering to maximize watch time.',
+      category: 'YouTube Long-Form',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      thumbnailUrl: 'https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=1200&q=80',
+      aspectRatio: '16:9',
+      duration: '11:15',
+      clientName: 'FinPulse Media',
+      featured: false,
+      order: 10,
+      status: 'published',
+      viewsCount: '640K Views',
+      tags: ['Finance', 'YouTube', 'Charts', 'Retention'],
+      createdAt: '2026-10-18'
+    }
+  ],
+  designCategories: [
+    'All',
+    'Thumbnails',
+    'Brand Identity & Logos',
+    'Social Media Posts',
+    'Posters & Banners',
+    'Mockups'
+  ],
+  designs: [
+    {
+      id: 'des-1',
+      title: 'High CTR YouTube Thumbnail Masterpiece',
+      description: 'Facial expression retouching, glow effects, high-contrast typography, and 3D floating assets optimized for 14%+ Click-Through Rate.',
+      category: 'Thumbnails',
+      imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80',
+      clientName: 'TechVibe YouTube',
+      featured: true,
+      order: 1,
+      status: 'published',
+      tags: ['CTR Optimized', 'Photoshop', 'Glow FX'],
+      createdAt: '2026-09-12'
+    },
+    {
+      id: 'des-2',
+      title: 'The Editor — Luxury Gold & Obsidian Brand Identity',
+      description: 'Official branding for Asma Shehzadi featuring stylized typography, golden play button insignia, and minimalist stationery.',
+      category: 'Brand Identity & Logos',
+      imageUrl: '/assets/aistudio/Gemini_Generated_Image_skq52gskq52gskq5_c6cd0d86.jfif',
+      clientName: 'The Editor Studio',
+      featured: true,
+      order: 2,
+      status: 'published',
+      tags: ['Logo Design', 'Vector', 'Typography'],
+      createdAt: '2026-09-20'
+    },
+    {
+      id: 'des-3',
+      title: 'Cinematic Movie Poster: Eclipse of Tomorrow',
+      description: 'Complex photo-manipulation combining 12 stock layers, dynamic lighting, atmospheric smoke, and Hollywood-grade title treatment.',
+      category: 'Posters & Banners',
+      imageUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
+      clientName: 'Indie Film Studios',
+      featured: true,
+      order: 3,
+      status: 'published',
+      tags: ['Photo Manipulation', 'Poster', 'Cinematic'],
+      createdAt: '2026-09-25'
+    },
+    {
+      id: 'des-4',
+      title: 'Instagram Carousel Guide: 5 Secret Editing Rules',
+      description: 'Engaging, swipeable carousel layout with seamless connecting graphics, bold hierarchy, and branded color system.',
+      category: 'Social Media Posts',
+      imageUrl: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1000&q=80',
+      clientName: 'Creative Academy',
+      featured: false,
+      order: 4,
+      status: 'published',
+      tags: ['Carousel', 'Instagram', 'Graphic Design'],
+      createdAt: '2026-10-02'
+    },
+    {
+      id: 'des-5',
+      title: 'SaaS Platform 3D Isometric Device Mockup',
+      description: 'Photorealistic perspective mockup showcasing digital dashboard inside floating tablet and desktop displays.',
+      category: 'Mockups',
+      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80',
+      clientName: 'CloudFlow Corp',
+      featured: false,
+      order: 5,
+      status: 'published',
+      tags: ['3D Mockup', 'UI Showcase', 'Branding'],
+      createdAt: '2026-10-05'
+    }
+  ],
+  skills: [
+    {
+      id: 'sk-1',
+      name: 'Adobe Premiere Pro',
+      category: 'Video Editing',
+      proficiency: 98,
+      iconName: 'Film',
+      description: 'Timeline mastery, multi-cam sync, dynamic linking, keyboard shortcuts, and fast delivery workflows.',
+      featured: true,
+      order: 1
+    },
+    {
+      id: 'sk-2',
+      name: 'Adobe After Effects',
+      category: 'Motion Graphics',
+      proficiency: 92,
+      iconName: 'Sparkles',
+      description: 'Keyframe curves, 2D/3D tracking, visual effects, kinetic typography, and logo stings.',
+      featured: true,
+      order: 2
+    },
+    {
+      id: 'sk-3',
+      name: 'Adobe Photoshop',
+      category: 'Graphic Design',
+      proficiency: 95,
+      iconName: 'Image',
+      description: 'High CTR thumbnail compositing, photo manipulation, frequency separation, and color treatment.',
+      featured: true,
+      order: 3
+    },
+    {
+      id: 'sk-4',
+      name: 'DaVinci Resolve',
+      category: 'Audio & Color',
+      proficiency: 88,
+      iconName: 'Palette',
+      description: 'Color wheels, curves, node trees, LUT management, and HDR grading for rich cinema look.',
+      featured: true,
+      order: 4
+    },
+    {
+      id: 'sk-5',
+      name: 'Adobe Illustrator',
+      category: 'Graphic Design',
+      proficiency: 90,
+      iconName: 'PenTool',
+      description: 'Vector logo craft, custom icons, typography hierarchy, and brand guide development.',
+      featured: false,
+      order: 5
+    },
+    {
+      id: 'sk-6',
+      name: 'Audio Restoration & SFX',
+      category: 'Audio & Color',
+      proficiency: 94,
+      iconName: 'Volume2',
+      description: 'Whoosh, risers, punch sound design, background music ducking, and vocal compression.',
+      featured: true,
+      order: 6
+    },
+    {
+      id: 'sk-7',
+      name: 'AI Editing & Generative Video',
+      category: 'Tools & Software',
+      proficiency: 91,
+      iconName: 'Cpu',
+      description: 'Runway Gen-2, Midjourney v6, ElevenLabs voice cloning, Topaz AI upscaling.',
+      featured: true,
+      order: 7
+    },
+    {
+      id: 'sk-8',
+      name: 'CapCut Pro Desktop',
+      category: 'Video Editing',
+      proficiency: 96,
+      iconName: 'Scissors',
+      description: 'Rapid short-form iteration, auto-captions animation, viral trend sound effects, and transitions.',
+      featured: false,
+      order: 8
+    }
+  ],
+  services: [
+    {
+      id: 'srv-1',
+      title: 'Viral Short-Form Reels & TikToks',
+      subtitle: 'Engineered for retention and virality',
+      description: 'Turn your raw smartphone or camera footage into scroll-stopping 9:16 vertical videos with hook pacing, animated captions, zooms, sound design, and viral effects.',
+      iconName: 'Smartphone',
+      category: 'Short Form',
+      deliverables: [
+        'Hook optimization in first 3 seconds',
+        'Animated bold kinetic captions',
+        'Rich SFX and background music ducking',
+        'Color grading & 4K export'
+      ],
+      turnaroundTime: '24 - 48 Hours',
+      startingPrice: '$45 / reel',
+      prices: {
+        USD: '$45 / reel',
+        PKR: 'Rs. 12,500 / reel',
+        GBP: '£35 / reel',
+        AED: '165 AED / reel'
+      },
+      ctaText: 'Book This Service',
+      ctaLink: '#contact',
+      isPublished: true,
+      featured: true,
+      order: 1
+    },
+    {
+      id: 'srv-2',
+      title: 'YouTube Long-Form & Documentary',
+      subtitle: 'Magnates Media & Vox style visual stories',
+      description: 'Comprehensive storytelling with seamless b-roll, photo parallax animations, motion graphics, custom charts, and deep audio layering that keeps average watch time above 60%.',
+      iconName: 'Youtube',
+      category: 'Long Form',
+      deliverables: [
+        'Complete narrative pacing & story arc',
+        'Custom 2.5D parallax photos & charts',
+        'Full sound design & audio mastering',
+        'Includes click-worthy YouTube Thumbnail'
+      ],
+      turnaroundTime: '3 - 5 Days',
+      startingPrice: '$180 / video',
+      prices: {
+        USD: '$180 / video',
+        PKR: 'Rs. 50,000 / video',
+        GBP: '£145 / video',
+        AED: '660 AED / video'
+      },
+      ctaText: 'Book This Service',
+      ctaLink: '#contact',
+      isPublished: true,
+      featured: true,
+      order: 2
+    },
+    {
+      id: 'srv-3',
+      title: 'High-CTR Thumbnails & Brand Design',
+      subtitle: 'Stand out in crowded feeds',
+      description: 'Eye-catching graphic design for YouTube thumbnails, social banners, logo marks, and brand assets crafted to maximize engagement and present a polished brand presence.',
+      iconName: 'Layers',
+      category: 'Graphic Design',
+      deliverables: [
+        'High-contrast photo retouching & lighting',
+        '3D text & dynamic asset placement',
+        'Multiple variations for A/B testing',
+        'Full vector source files'
+      ],
+      turnaroundTime: '24 Hours',
+      startingPrice: '$35 / design',
+      prices: {
+        USD: '$35 / design',
+        PKR: 'Rs. 9,500 / design',
+        GBP: '£28 / design',
+        AED: '130 AED / design'
+      },
+      ctaText: 'Book This Service',
+      ctaLink: '#contact',
+      isPublished: true,
+      featured: true,
+      order: 3
+    },
+    {
+      id: 'srv-4',
+      title: 'Commercial Ads & Motion Graphics',
+      subtitle: 'High conversion video promotions',
+      description: 'High-energy promotional video clips for SaaS products, physical eCommerce goods, app launches, and agency pitch decks.',
+      iconName: 'Zap',
+      category: 'Commercial',
+      deliverables: [
+        '3D device mockups & screen captures',
+        'Custom motion graphic animations',
+        'Voiceover sync and licensed soundtracks',
+        'Multi-format exports (16:9, 9:16, 1:1)'
+      ],
+      turnaroundTime: '3 - 4 Days',
+      startingPrice: '$250 / project',
+      prices: {
+        USD: '$250 / project',
+        PKR: 'Rs. 70,000 / project',
+        GBP: '£195 / project',
+        AED: '920 AED / project'
+      },
+      ctaText: 'Book This Service',
+      ctaLink: '#contact',
+      isPublished: true,
+      featured: false,
+      order: 4
+    }
+  ],
+  testimonials: [
+    {
+      id: 'test-1',
+      clientName: 'David Vance',
+      clientRole: 'CEO & Founder',
+      clientCompany: 'Vance Media Global (US)',
+      clientAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+      rating: 5,
+      reviewText: "Asma is easily one of the best video editors I've ever hired. Our YouTube channel retention jumped from 38% to 62% in just two weeks after she took over the editing and pacing. Her sound design is unmatched!",
+      projectType: 'YouTube Documentary & Talking Head',
+      order: 1,
+      isPublished: true,
+      featured: true
+    },
+    {
+      id: 'test-2',
+      clientName: 'Elena Rostova',
+      clientRole: 'Lifestyle Creator & Influencer',
+      clientCompany: 'ElenaStyle (2.4M Followers)',
+      clientAvatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80',
+      rating: 5,
+      reviewText: "She turned our simple phone clips into viral masterpieces on Instagram and TikTok. Three of our reels crossed 1 million views each within a month. Communication was super smooth and lightning fast delivery!",
+      projectType: 'Short-Form Reels Editing',
+      order: 2,
+      isPublished: true,
+      featured: true
+    },
+    {
+      id: 'test-3',
+      clientName: 'Markus Lindberg',
+      clientRole: 'Product Marketing Director',
+      clientCompany: 'PulsePay Fintech (UK)',
+      clientAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+      rating: 5,
+      reviewText: "Working with The Editor was a breath of fresh air. She understood our brand guidelines immediately, crafted incredible motion graphics, and designed thumbnails that outperformed our previous agency.",
+      projectType: 'Commercial Ad & Motion Design',
+      order: 3,
+      isPublished: true,
+      featured: true
+    },
+    {
+      id: 'test-4',
+      clientName: 'Tariq Al-Mansoor',
+      clientRole: 'Managing Partner',
+      clientCompany: 'Apex Real Estate Dubai',
+      clientAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+      rating: 5,
+      reviewText: "The color grading and luxury aesthetic Asma brought to our property showcases elevated our entire brand perception. High-ticket buyers constantly compliment our video presentation.",
+      projectType: 'Cinematic Property Showcase',
+      order: 4,
+      isPublished: true,
+      featured: true
+    },
+    {
+      id: 'test-5',
+      clientName: 'Sarah Jenkins',
+      clientRole: 'Podcast Host',
+      clientCompany: 'The Creative Spark Show',
+      clientAvatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
+      rating: 5,
+      reviewText: "Asma's edits are snappy without feeling chaotic. She highlights the jokes and pivotal quotes with pinpoint audio cues and kinetic subtitles. Highly recommend her for any serious creator!",
+      projectType: 'Podcast Video & Social Clips',
+      order: 5,
+      isPublished: true,
+      featured: true
+    }
+  ],
+  dynamicSections: [
+    {
+      id: 'sec-before-after',
+      key: 'before-after-showcase',
+      title: 'Before & After: The Edit Transformation',
+      subtitle: 'Slide to experience raw unedited camera footage versus the final color-graded, sound-designed cut.',
+      badge: 'Visual Craftsmanship',
+      layoutType: 'before-after',
+      isEnabled: true,
+      order: 1,
+      customData: {
+        beforeImage: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80',
+        afterImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
+        beforeLabel: 'Raw Log Footage',
+        afterLabel: 'Graded & Edited Cut'
+      },
+      blocks: [
+        {
+          id: 'blk-ba-1',
+          type: 'text',
+          content: 'Every frame is sculpted with intent. From correcting exposure and balancing skin tones to applying rich cinematic LUTs and removing background noise, your raw footage is elevated to broadcast quality.'
+        }
+      ]
+    },
+    {
+      id: 'sec-workflow',
+      key: 'creative-process',
+      title: 'My 4-Step Editing Process',
+      subtitle: 'From initial briefing to the polished 4K final delivery, here is how we bring your vision to life.',
+      badge: 'Workflow',
+      layoutType: 'cards',
+      isEnabled: true,
+      order: 2,
+      blocks: [
+        {
+          id: 'step-1',
+          type: 'card',
+          badge: 'Phase 01',
+          content: 'Vision & Footage Ingestion',
+          subcontent: 'We discuss your project goals, audience, target platform, and pacing style. You upload raw files and audio safely via Google Drive or Dropbox.'
+        },
+        {
+          id: 'step-2',
+          type: 'card',
+          badge: 'Phase 02',
+          content: 'The Rough Cut & Story Arc',
+          subcontent: 'I assemble the narrative backbone, trim dead space, curate the best takes, and structure the video hook for maximum retention.'
+        },
+        {
+          id: 'step-3',
+          type: 'card',
+          badge: 'Phase 03',
+          content: 'VFX, Sound Design & Color Grade',
+          subcontent: 'Adding kinetic text, B-roll overlays, bespoke sound effects, music sync, atmospheric risers, and cinematic color correction.'
+        },
+        {
+          id: 'step-4',
+          type: 'card',
+          badge: 'Phase 04',
+          content: 'Review & Final 4K Delivery',
+          subcontent: 'You review the draft, request any micro adjustments, and receive the finalized high-bitrate video ready to publish.'
+        }
+      ]
+    },
+    {
+      id: 'sec-faqs',
+      key: 'frequently-asked-questions',
+      title: 'Frequently Asked Questions',
+      subtitle: 'Got questions before starting? Find quick answers right here.',
+      badge: 'Clear Answers',
+      layoutType: 'faq-accordion',
+      isEnabled: true,
+      order: 3,
+      blocks: [
+        {
+          id: 'faq-1',
+          type: 'card',
+          content: 'What video editing software do you use?',
+          subcontent: 'I primarily use Adobe Premiere Pro for editing and pacing, Adobe After Effects for motion graphics and visual effects, DaVinci Resolve for advanced color grading, and Adobe Photoshop/Illustrator for graphic design and thumbnails.'
+        },
+        {
+          id: 'faq-2',
+          type: 'card',
+          content: 'How do I send my raw video files to you?',
+          subcontent: 'You can upload your files to Google Drive, Dropbox, WeTransfer, or Frame.io and share the link. I handle large video file transfers efficiently.'
+        },
+        {
+          id: 'faq-3',
+          type: 'card',
+          content: 'What is your standard turnaround time?',
+          subcontent: 'For short-form reels and TikToks, delivery is typically 24-48 hours. Long-form YouTube videos and commercial projects range between 3 to 5 business days depending on complexity.'
+        },
+        {
+          id: 'faq-4',
+          type: 'card',
+          content: 'Do you offer revisions if I need changes?',
+          subcontent: 'Yes! Every project includes up to 2 rounds of free revisions to ensure you are 100% delighted with the timing, sound design, and text.'
+        }
+      ]
+    }
+  ],
+  theme: {
+    defaultTheme: 'dark',
+    allowThemeToggle: true,
+    rememberPreference: true,
+    activePreset: 'gold',
+    darkColors: {
+      bg: '#0A0A0A',
+      cardBg: '#141414',
+      text: '#F3F4F6',
+      textMuted: '#9CA3AF',
+      heading: '#FFFFFF',
+      accent: '#F59E0B',
+      accentHover: '#D97706',
+      border: '#262626',
+      btnBg: '#F59E0B',
+      btnText: '#0A0A0A'
+    },
+    lightColors: {
+      bg: '#F9FAFB',
+      cardBg: '#FFFFFF',
+      text: '#1F2937',
+      textMuted: '#6B7280',
+      heading: '#111827',
+      accent: '#D97706',
+      accentHover: '#B45309',
+      border: '#E5E7EB',
+      btnBg: '#D97706',
+      btnText: '#FFFFFF'
+    },
+    typography: {
+      headingFont: 'Plus Jakarta Sans',
+      bodyFont: 'Plus Jakarta Sans',
+      baseFontSize: 'md'
+    },
+    buttonStyle: {
+      rounded: 'full',
+      shadow: true
+    },
+    cardStyle: {
+      rounded: 'xl',
+      borderStyle: 'subtle'
+    },
+    sectionColors: {},
+    sectionAnimations: {}
+  },
+  navigation: {
+    logoType: 'both',
+    logoText: 'THE EDITOR',
+    logoSubtitle: 'Asma Shehzadi',
+    logoImageUrl: '/assets/aistudio/Gemini_Generated_Image_wvank6wvank6wvan_71b2d2c5.png',
+    menuItems: [
+      { id: 'nav-1', label: 'Home', href: '#hero', isExternal: false, isVisible: true, order: 1 },
+      { id: 'nav-2', label: 'Videos', href: '#video-portfolio', isExternal: false, isVisible: true, order: 2 },
+      { id: 'nav-3', label: 'Graphic Design', href: '#design-portfolio', isExternal: false, isVisible: true, order: 3 },
+      { id: 'nav-4', label: 'Skills & Tools', href: '#skills-section', isExternal: false, isVisible: true, order: 4 },
+      { id: 'nav-5', label: 'Services', href: '#services-section', isExternal: false, isVisible: true, order: 5 },
+      { id: 'nav-6', label: 'About', href: '#about-section', isExternal: false, isVisible: true, order: 6 },
+      { id: 'nav-7', label: 'Reviews', href: '#testimonials-section', isExternal: false, isVisible: true, order: 7 },
+      { id: 'nav-8', label: 'Contact', href: '#contact', isExternal: false, isVisible: true, order: 8 }
+    ],
+    ctaButton: {
+      label: 'Hire Me',
+      href: '#contact',
+      isVisible: true
+    },
+    footer: {
+      tagline: 'Turning ideas into visual stories with premium video editing and distinctive graphic design.',
+      copyrightText: '© 2026 The Editor — Asma Shehzadi. All rights reserved.',
+      showSocials: true,
+      columns: [
+        {
+          title: 'Navigation',
+          links: [
+            { label: 'Video Showcase', url: '#video-portfolio' },
+            { label: 'Graphic Gallery', url: '#design-portfolio' },
+            { label: 'Services & Pricing', url: '#services-section' },
+            { label: 'Client Reviews', url: '#testimonials-section' }
+          ]
+        },
+        {
+          title: 'Specialties',
+          links: [
+            { label: 'Viral Short-Form Reels', url: '#video-portfolio' },
+            { label: 'YouTube Documentaries', url: '#video-portfolio' },
+            { label: 'Motion Graphics', url: '#video-portfolio' },
+            { label: 'High-CTR Thumbnails', url: '#design-portfolio' }
+          ]
+        },
+        {
+          title: 'Direct Connect',
+          links: [
+            { label: 'asmashehzadi200@gmail.com', url: 'mailto:asmashehzadi200@gmail.com' },
+            { label: 'Chat on WhatsApp', url: 'https://wa.me/923000000000' },
+            { label: 'Admin Login', url: '#/admin' }
+          ]
+        }
+      ]
+    }
+  },
+  contact: {
+    email: 'asmashehzadi200@gmail.com',
+    whatsappNumber: '+92 300 0000000',
+    whatsappMessage: 'Hi Asma! I saw your portfolio and I would love to discuss a video editing / graphic design project with you.',
+    calendarLink: 'https://calendly.com',
+    phone: '+92 300 0000000',
+    location: 'Pakistan (Available Globally)',
+    workStatus: 'Available for freelance & full-time',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://youtube.com', label: 'YouTube', isVisible: true },
+      { platform: 'instagram', url: 'https://instagram.com', label: 'Instagram', isVisible: true },
+      { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn', isVisible: true },
+      { platform: 'behance', url: 'https://behance.net', label: 'Behance', isVisible: true },
+      { platform: 'fiverr', url: 'https://fiverr.com', label: 'Fiverr Pro', isVisible: true },
+      { platform: 'upwork', url: 'https://upwork.com', label: 'Upwork Top Rated', isVisible: true }
+    ]
+  },
+  seo: {
+    metaTitle: 'The Editor — Asma Shehzadi | Video Editor & Graphic Designer',
+    metaDescription: 'Official portfolio of Asma Shehzadi (The Editor) — Video Editor and Graphic Designer specializing in high-retention reels, documentaries, motion graphics, and visual branding.',
+    ogTitle: 'The Editor — Asma Shehzadi | Video Editing & Graphic Designing',
+    ogDescription: 'Turning ideas into visual stories. Explore my video editing portfolio, motion graphics, and graphic design showcase.',
+    ogImage: '/assets/aistudio/Gemini_Generated_Image_skq52gskq52gskq5_c6cd0d86.jfif',
+    keywords: [
+      'Asma Shehzadi',
+      'The Editor',
+      'Video Editor',
+      'Graphic Designer',
+      'Reels Editor',
+      'YouTube Editor',
+      'Motion Graphics',
+      'Premiere Pro',
+      'After Effects',
+      'Thumbnails Designer'
+    ]
+  },
+  pricingSettings: {
+    defaultCurrency: 'USD',
+    enableCurrencySelector: true,
+    ctaButtonText: 'Book This Service',
+    ctaButtonLink: '#contact'
+  },
+  sectionHeadings: {
+    videos: {
+      badge: 'Video Editing Showcase',
+      title: 'Selected Video Projects',
+      subtitle: 'From viral short-form retention edits to immersive documentary storytelling and commercial campaigns.',
+      reelsTitle: 'Short-Form Vertical Reels (9:16)',
+      reelsSubtitle: 'Engineered for high watch time, quick cuts, and viral retention',
+      longFormTitle: 'Long-Form & Cinematic Productions (16:9)',
+      longFormSubtitle: ''
+    },
+    designs: {
+      badge: 'Visual Branding & Graphic Design',
+      title: 'Graphic Design Showcase',
+      subtitle: 'High CTR YouTube thumbnails, logo brand systems, social media banners, and promotional print assets.'
+    },
+    skills: {
+      badge: 'Capabilities & Tooling',
+      title: 'Skills & Software Mastery',
+      subtitle: 'Industry-standard post-production suites paired with generative AI workflows for maximum speed and quality.'
+    },
+    services: {
+      badge: 'High Impact Deliverables',
+      title: 'Services & Pricing Packages',
+      subtitle: 'Tailored creative packages designed to elevate your personal brand, channel, or commercial campaigns.'
+    },
+    testimonials: {
+      badge: 'Client Endorsements',
+      title: 'What Creators & Brands Say',
+      subtitle: 'Real feedback from YouTube creators, agencies, influencers, and luxury real estate partners.'
+    },
+    about: {
+      badge: 'The Person Behind The Timeline',
+      title: 'About Me',
+      subtitle: 'Crafting narratives that leave lasting impressions.'
+    },
+    contact: {
+      badge: "Let's Create Together",
+      title: 'Ready to elevate your visual content?',
+      subtitle: 'Have an upcoming video project, YouTube channel launch, or branding redesign? Send a message directly or schedule a call.'
+    }
+  },
+  lastUpdated: new Date().toISOString()
+};
